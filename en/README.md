@@ -1,6 +1,8 @@
-# Security templates for vibe coding (ChatGPT, Claude, Cursor)
+# promptpunk
 
-Handout from the **CryptoByte / promptpunk** talk — copy into your own project or account only what you use.
+Security templates for vibe coding (ChatGPT, Claude, Cursor).
+
+Handout from the **CryptoByte** talk — copy into your own project or account only what you use.
 
 **Keep this tree in sync** with the Czech mirror under [`../`](../README.md) (same filenames and layout) so updates stay predictable.
 

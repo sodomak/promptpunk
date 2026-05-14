@@ -1,6 +1,8 @@
-# Bezpečnostní šablony pro vibe coding (ChatGPT, Claude, Cursor)
+# promptpunk
 
-Materiál z přednášky **CryptoByte / promptpunk** — zkopírujte si do vlastního projektu nebo účtu jen to, co používáte.
+Bezpečnostní šablony pro vibe coding (ChatGPT, Claude, Cursor).
+
+Materiál z přednášky **CryptoByte** — zkopírujte si do vlastního projektu nebo účtu jen to, co používáte.
 
 ## English / Anglicky
 
