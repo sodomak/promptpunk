@@ -36,7 +36,3 @@ Best practices and product UIs change. This pack reflects **May 2026**; verify c
 - [Cursor — Rules](https://docs.cursor.com/context/rules)
 - [OpenAI — Security](https://openai.com/security)
 - [Anthropic — Claude Code security](https://docs.anthropic.com/en/docs/claude-code/security)
-
-## Disclaimer
-
-These files are **not a legal or security audit**, do not replace corporate DLP, your contract with the model vendor, or your organisation’s training. You use them at your own risk.

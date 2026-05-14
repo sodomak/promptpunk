@@ -36,7 +36,3 @@ Doporučené postupy a UI se mění. Materiál je psán s ohledem na stav k **kv
 - [Cursor — Rules](https://docs.cursor.com/context/rules)
 - [OpenAI — Security](https://openai.com/security)
 - [Anthropic — Claude Code security](https://docs.anthropic.com/en/docs/claude-code/security)
-
-## Disclaimer
-
-Tyto soubory **nejsou právní ani bezpečnostní audit**, nenahrazují firemní DLP, smluvní režim s dodavatelem modelu ani školení vaší organizace. Používáte je na vlastní zodpovědnost.
