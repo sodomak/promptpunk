@@ -9,7 +9,7 @@ alwaysApply: true
 - **Vstupy:** U uživatelského vstupu předpokladej útok; navrhuj validaci, escapování kontextu (HTML/SQL/shell), CSRF u webových formulářů kde platí.
 - **SQL:** Parametrizované dotazy / prepared statements; žádné skládání dotazu řetězcovou interpolací z nedůvěryhodných dat.
 - **Závislosti:** Nepřidávej náhodné balíčky; preferuj ověřené knihovny, pin verzí; upozorni na riziko supply chain.
-- **Logy:** Nevypisuj tajemství ani PII; strukturované logy bez citlivých payloadů.
+- **Logy:** Nevypisuj tajemství ani osobní údaje; strukturované logy bez citlivých payloadů.
 - **Infra:** Privátní síť ve výchozím stavu, TLS navenek, least privilege pro IAM a DB účty.
 - **Důvěra k výstupu:** Každá změna může mít bezpečnostní dopad — piš diffy, které je snadné zkontrolovat; při nejasnostech se ptej.
 

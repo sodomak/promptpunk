@@ -17,6 +17,6 @@ Oficiální nápověda: [Custom instructions for ChatGPT](https://help.openai.co
 ## Rychlý checklist před odesláním promptu
 
 - [ ] V promptu nejsou hesla, API klíče, privátní klíče, connection stringy.
-- [ ] Neposílám celé dumpy produkční databáze ani kompletní logy s PII.
+- [ ] Neposílám celé dumpy produkční databáze ani kompletní logy s osobními údaji (jména, e-maily, telefony, adresy zákazníků apod.).
 - [ ] Pokud vkládám kód, je to **minimalizovaný reprodukční příklad**, ne celý monolit.
 - [ ] Výstup z modelu **projdu** před nasazením; neočekávám „bezchybnou“ bezpečnost.

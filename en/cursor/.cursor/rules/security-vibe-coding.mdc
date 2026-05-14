@@ -9,7 +9,7 @@ alwaysApply: true
 - **Inputs:** Treat user input as hostile by default; suggest validation and context-appropriate escaping (HTML/SQL/shell), and CSRF for web forms where applicable.
 - **SQL:** Parameterised queries / prepared statements; no query string built by concatenating untrusted data.
 - **Dependencies:** Do not add random packages; prefer well-known libraries, pin versions, and mention supply-chain risk.
-- **Logs:** Do not log secrets or PII; prefer structured logs without sensitive payloads.
+- **Logs:** Do not log secrets or personally identifiable information; prefer structured logs without sensitive payloads.
 - **Infra:** Private-by-default networking, TLS to clients, least privilege for IAM and DB roles.
 - **Trust but verify:** Every change can have security impact — write reviewable diffs; ask when unsure.
 

@@ -17,6 +17,6 @@ Official help: [Custom instructions for ChatGPT](https://help.openai.com/en/arti
 ## Quick checklist before sending a prompt
 
 - [ ] No passwords, API keys, private keys, or connection strings in the prompt.
-- [ ] No full production DB dumps or complete logs containing PII.
+- [ ] No full production DB dumps or complete logs with personal data (names, emails, phone numbers, customer addresses, etc.).
 - [ ] If I paste code, it is a **minimal repro**, not the whole monolith.
 - [ ] I will **review** model output before shipping; I do not assume “secure by default.”
