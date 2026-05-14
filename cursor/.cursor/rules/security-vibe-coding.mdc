@@ -1,0 +1,16 @@
+---
+description: Základní bezpečnostní pravidla pro generování a úpravu kódu (vibe coding)
+alwaysApply: true
+---
+
+# Bezpečnost kódu a dat
+
+- **Tajemství:** Nikdy neukládej ani nenavrhuj API klíče, hesla, privátní klíče, OAuth tokeny ani connection stringy s heslem. Používej proměnné prostředí, secret manager nebo šablony s placeholdery (`YOUR_SECRET_HERE` jen jako text bez reálné hodnoty).
+- **Vstupy:** U uživatelského vstupu předpokladej útok; navrhuj validaci, escapování kontextu (HTML/SQL/shell), CSRF u webových formulářů kde platí.
+- **SQL:** Parametrizované dotazy / prepared statements; žádné skládání dotazu řetězcovou interpolací z nedůvěryhodných dat.
+- **Závislosti:** Nepřidávej náhodné balíčky; preferuj ověřené knihovny, pin verzí; upozorni na riziko supply chain.
+- **Logy:** Nevypisuj tajemství ani PII; strukturované logy bez citlivých payloadů.
+- **Infra:** Privátní síť ve výchozím stavu, TLS navenek, least privilege pro IAM a DB účty.
+- **Důvěra k výstupu:** Každá změna může mít bezpečnostní dopad — piš diffy, které je snadné zkontrolovat; při nejasnostech se ptej.
+
+Inspirace: bezpečné uvažování před kódem (např. veřejné materiály k *secure vibe coding* a projektovým pravidlům).

@@ -1,0 +1,26 @@
+# Zkopírujte tento soubor jako .cursorignore do kořene projektu a upravte podle potřeby.
+# Řádky začínající # jsou komentáře.
+
+# Prostředí a tajemství
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/id_rsa
+**/id_ed25519
+**/secrets/**
+**/*credentials*
+**/*.pfx
+**/*.p12
+
+# Zálohy a výstupy, často obří nebo citlivé
+**/backup/**
+**/*.sql
+**/*.dump
+**/node_modules/**
+**/.git/**
+
+# Další (odkomentujte podle projektu)
+# **/dist/**
+# **/build/**
+# **/.next/**
