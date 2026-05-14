@@ -2,6 +2,17 @@
 
 Materiál z přednášky **CryptoByte / promptpunk** — zkopírujte si do vlastního projektu nebo účtu jen to, co používáte.
 
+## English / Anglicky
+
+Kompletní anglický mirror stejné struktury: **[`en/README.md`](en/README.md)**. Při úpravách držte CZ a EN stromy v souladu (stejné názvy souborů).
+
+| Téma | Česky | English |
+|------|-------|---------|
+| Kořen | [`README.md`](README.md) (tato stránka) | [`en/README.md`](en/README.md) |
+| ChatGPT | [`chatgpt/`](chatgpt/) | [`en/chatgpt/`](en/chatgpt/) |
+| Claude | [`claude/`](claude/) | [`en/claude/`](en/claude/) |
+| Cursor | [`cursor/`](cursor/) | [`en/cursor/`](en/cursor/) |
+
 ## Struktura
 
 | Složka / soubor | Účel |

@@ -1,0 +1,26 @@
+# Copy this file to your project root as .cursorignore and adjust as needed.
+# Lines starting with # are comments.
+
+# Environment and secrets
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+**/id_rsa
+**/id_ed25519
+**/secrets/**
+**/*credentials*
+**/*.pfx
+**/*.p12
+
+# Backups and outputs (often huge or sensitive)
+**/backup/**
+**/*.sql
+**/*.dump
+**/node_modules/**
+**/.git/**
+
+# Uncomment for your stack as needed
+# **/dist/**
+# **/build/**
+# **/.next/**
