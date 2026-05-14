@@ -18,6 +18,8 @@ Handout from the **CryptoByte / promptpunk** talk — copy into your own project
 2. **Claude (web):** new Project → paste the **entire fenced block** from [`claude/project-instructions.md`](claude/project-instructions.md) into instructions.
 3. **Cursor:** copy `cursor/.cursor` to your repo root and copy or merge `cursor/.cursorignore.example` as `.cursorignore`. Details in [`cursor/README.md`](cursor/README.md).
 
+**ChatGPT and Claude (web):** the templates in [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) and [`claude/project-instructions.md`](claude/project-instructions.md) share the **same six rules** (including Terraform, Helm, CI, Docker); only the opening line differs (Custom Instructions vs Project instructions).
+
 ## Czech vs English paths
 
 | Topic | Czech | English |

@@ -27,6 +27,8 @@ Kompletní anglický mirror stejné struktury: **[`en/README.md`](en/README.md)*
 2. **Claude (web):** nový Project → do Instructions vložte **celý kódový blok** z [`claude/project-instructions.md`](claude/project-instructions.md).
 3. **Cursor:** zkopírujte obsah složky `cursor/.cursor` do kořene vlastního repozitáře a `cursor/.cursorignore.example` přejmenujte na `.cursorignore` (nebo slučte vzory). Detaily v [`cursor/README.md`](cursor/README.md).
 
+**ChatGPT a Claude (web):** šablony v [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) a [`claude/project-instructions.md`](claude/project-instructions.md) mají **shodných šest pravidel** (včetně konkrétní zmínky Terraform, Helm, CI, Docker); liší se jen úvodní věta podle toho, jestli píšete Custom Instructions nebo Project instructions.
+
 ## Platnost a odkazy
 
 Doporučené postupy a UI se mění. Materiál je psán s ohledem na stav k **květnu 2026**; ověřte si aktuální volby u poskytovatele:
