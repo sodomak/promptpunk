@@ -4,7 +4,7 @@
 
 A Claude Project has its own **Project instructions** and often uploaded files. Steps:
 
-1. Create a **Project** and paste [`project-instructions.md`](project-instructions.md) into the instructions field.
+1. Create a **Project** and paste **the fenced template block** from [`project-instructions.md`](project-instructions.md) into the instructions field. Copy the whole block at once.
 2. Do **not** upload `.env` files, production exports, contracts with personal data, or internal documents that must not leave your company perimeter unless you have approval and the right account type.
 
 ## 2) Claude Code (terminal / IDE)

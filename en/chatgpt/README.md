@@ -4,7 +4,7 @@
 
 1. Open ChatGPT → **Settings**.
 2. **Personalization** → **Custom instructions** (wording may vary by product tier).
-3. Paste the contents of [`custom-instructions.md`](custom-instructions.md) into the field **“How would you like ChatGPT to respond?”** (or the equivalent second field in your UI).
+3. Paste **the fenced template block** from [`custom-instructions.md`](custom-instructions.md) into the field **“How would you like ChatGPT to respond?”** (or the equivalent second field in your UI). Copy the whole block at once.
 4. In the first field (“What would you like ChatGPT to know about you?”) **do not put sensitive data** — keep a neutral role (e.g. “software engineer, prefer concise answers”).
 
 Official help: [Custom instructions for ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt).

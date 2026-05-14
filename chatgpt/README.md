@@ -4,7 +4,7 @@
 
 1. Otevřete ChatGPT → **Nastavení** (Settings).
 2. Sekce **Personalization** → **Custom instructions** (Custom instructions for ChatGPT).
-3. Do pole pro **„How would you like ChatGPT to respond?“** (nebo obdobného druhého pole podle verze UI) vložte obsah souboru [`custom-instructions.md`](custom-instructions.md).
+3. Do pole pro **„How would you like ChatGPT to respond?“** (nebo obdobného druhého pole podle verze UI) vložte **obsah kódového bloku** ze souboru [`custom-instructions.md`](custom-instructions.md) (zkopírujte celý blok najednou).
 4. První pole („What would you like ChatGPT to know about you?“) **nepište citlivé údaje** — držte se neutrální role (např. „softwarový vývojář, preferuji stručné odpovědi“).
 
 Oficiální nápověda: [Custom instructions for ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt).

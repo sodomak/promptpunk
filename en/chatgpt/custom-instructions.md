@@ -1,11 +1,10 @@
 # Text to paste into ChatGPT (Custom Instructions)
 
-> Copy **from “Template start” through “Template end”** into the second Custom Instructions field (see README in this folder).
+> Copy **the entire fenced block below** (use the copy button on the code block in Markdown preview, or triple-click inside the block and Ctrl+C), then paste it into the second Custom Instructions field — see [`README.md`](README.md) in this folder.
 
----
+## Template
 
-## Template start
-
+```text
 When answering about code, configuration, or architecture:
 
 1. **Security first:** Never suggest hardcoded secrets (passwords, API keys, private keys, OAuth tokens, connection strings with passwords). Always prefer environment variables, a vault, or a secrets manager appropriate to the stack. If the user pastes a real secret, warn them to rotate it immediately and not to rely on the chat as secure storage.
@@ -21,8 +20,7 @@ When answering about code, configuration, or architecture:
 6. **Uncertainty:** If you lack context for a safe decision (e.g. auth threat model), ask clarifying questions instead of guessing.
 
 Response language: **English**, unless the user writes primarily in another language (then match their language).
-
-## Template end
+```
 
 ---
 

@@ -4,7 +4,7 @@
 
 Projekt v Claude má vlastní **Project instructions** a často i nahrané soubory. Postup:
 
-1. Vytvořte **Project** a do instrukcí vložte obsah [`project-instructions.md`](project-instructions.md).
+1. Vytvořte **Project** a do instrukcí vložte **obsah kódového bloku** ze souboru [`project-instructions.md`](project-instructions.md) (zkopírujte celý blok najednou).
 2. Do projektu **nenahrávejte** `.env`, produkční exporty, smlouvy s osobními údaji ani interní dokumenty, které nesmí opustit perimetr firmy, pokud k tomu nemáte souhlas a správný typ účtu.
 
 ## 2) Claude Code (terminál / IDE)

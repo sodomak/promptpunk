@@ -14,8 +14,8 @@ Handout from the **CryptoByte / promptpunk** talk — copy into your own project
 
 ## How to use
 
-1. **ChatGPT:** open [`chatgpt/README.md`](chatgpt/README.md), paste `custom-instructions.md` into Custom Instructions.
-2. **Claude (web):** new Project → instructions from [`claude/project-instructions.md`](claude/project-instructions.md).
+1. **ChatGPT:** open [`chatgpt/README.md`](chatgpt/README.md), copy the **entire fenced block** from [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) into Custom Instructions.
+2. **Claude (web):** new Project → paste the **entire fenced block** from [`claude/project-instructions.md`](claude/project-instructions.md) into instructions.
 3. **Cursor:** copy `cursor/.cursor` to your repo root and copy or merge `cursor/.cursorignore.example` as `.cursorignore`. Details in [`cursor/README.md`](cursor/README.md).
 
 ## Czech vs English paths

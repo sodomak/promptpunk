@@ -23,8 +23,8 @@ Kompletní anglický mirror stejné struktury: **[`en/README.md`](en/README.md)*
 
 ## Jak to použít
 
-1. **ChatGPT:** otevřete [`chatgpt/README.md`](chatgpt/README.md), vložte text z `custom-instructions.md` do nastavení Custom Instructions.
-2. **Claude (web):** nový Project → Instructions podle [`claude/project-instructions.md`](claude/project-instructions.md).
+1. **ChatGPT:** otevřete [`chatgpt/README.md`](chatgpt/README.md), zkopírujte **celý kódový blok** z [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) a vložte ho do nastavení Custom Instructions.
+2. **Claude (web):** nový Project → do Instructions vložte **celý kódový blok** z [`claude/project-instructions.md`](claude/project-instructions.md).
 3. **Cursor:** zkopírujte obsah složky `cursor/.cursor` do kořene vlastního repozitáře a `cursor/.cursorignore.example` přejmenujte na `.cursorignore` (nebo slučte vzory). Detaily v [`cursor/README.md`](cursor/README.md).
 
 ## Platnost a odkazy
