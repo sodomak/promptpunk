@@ -1,0 +1,121 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'chatgpt/**'
+      - 'claude/**'
+      - 'cursor/**'
+      - 'en/**'
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Manual version bump'
+        type: choice
+        options: [patch, minor, major]
+        default: patch
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      !contains(github.event.head_commit.message, '[skip ci]')
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Calculate version
+        id: version
+        env:
+          BUMP: ${{ github.event_name == 'workflow_dispatch' && inputs.bump || 'patch' }}
+        run: |
+          set -euo pipefail
+
+          LATEST=$(git tag -l 'v*' --sort=-v:refname | head -1 || true)
+
+          if [ -z "$LATEST" ]; then
+            NEW="1.0.0"
+          else
+            VER="${LATEST#v}"
+            IFS='.' read -r MAJOR MINOR PATCH <<< "$VER"
+            MAJOR=${MAJOR:-0}
+            MINOR=${MINOR:-0}
+            PATCH=${PATCH:-0}
+
+            case "$BUMP" in
+              major)
+                MAJOR=$((MAJOR + 1))
+                MINOR=0
+                PATCH=0
+                ;;
+              minor)
+                MINOR=$((MINOR + 1))
+                PATCH=0
+                ;;
+              patch)
+                PATCH=$((PATCH + 1))
+                ;;
+              *)
+                echo "Unknown bump: $BUMP" >&2
+                exit 1
+                ;;
+            esac
+
+            NEW="${MAJOR}.${MINOR}.${PATCH}"
+          fi
+
+          TAG="v${NEW}"
+
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists — skipping release."
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          echo "new=$NEW" >> "$GITHUB_OUTPUT"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Release version: $TAG"
+
+      - name: Stop if tag exists
+        if: steps.version.outputs.exists == 'true'
+        run: echo "Nothing to do."
+
+      - name: Update VERSION file
+        if: steps.version.outputs.exists != 'true'
+        run: echo "${{ steps.version.outputs.new }}" > VERSION
+
+      - name: Commit VERSION
+        if: steps.version.outputs.exists != 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add VERSION
+          git diff --staged --quiet || git commit -m "chore(release): ${{ steps.version.outputs.tag }} [skip ci]"
+
+      - name: Push commit and tag
+        if: steps.version.outputs.exists != 'true'
+        run: |
+          git tag "${{ steps.version.outputs.tag }}"
+          git push origin HEAD:main
+          git push origin "${{ steps.version.outputs.tag }}"
+
+      - name: Create GitHub Release
+        if: steps.version.outputs.exists != 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: promptpunk ${{ steps.version.outputs.tag }}
+          generate_release_notes: true
