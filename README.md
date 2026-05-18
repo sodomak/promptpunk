@@ -6,6 +6,8 @@
 
 ---
 
+<a id="english"></a>
+
 Security templates for vibe coding (ChatGPT, Claude, Cursor).
 
 Handout from the **CryptoByte** talk — copy into your own project or account only what you use.
@@ -42,7 +44,7 @@ Keep the Czech and English template trees in sync (same filenames and layout).
 
 | Topic | Czech templates | English templates |
 |-------|-----------------|-------------------|
-| Root docs | [`README.md#cesky`](README.md#cesky) | this page (top) |
+| Root docs | [Czech section](#cesky) | [English section](#english) |
 | ChatGPT | [`chatgpt/`](chatgpt/) | [`en/chatgpt/`](en/chatgpt/) |
 | Claude | [`claude/`](claude/) | [`en/claude/`](en/claude/) |
 | Cursor | [`cursor/`](cursor/) | [`en/cursor/`](en/cursor/) |
@@ -58,9 +60,11 @@ Best practices and product UIs change. This pack reflects **May 2026**; verify c
 
 ---
 
-## Česky {#cesky}
+<a id="cesky"></a>
 
-**English:** [back to top](#promptpunk) · [Releases](https://github.com/sodomak/promptpunk/releases) · [Stáhnout latest](https://github.com/sodomak/promptpunk/releases/latest)
+## Česky
+
+**English:** [back to English](#english) · [Releases](https://github.com/sodomak/promptpunk/releases) · [Stáhnout latest](https://github.com/sodomak/promptpunk/releases/latest)
 
 Bezpečnostní šablony pro vibe coding (ChatGPT, Claude, Cursor).
 
@@ -98,7 +102,7 @@ Při úpravách držte český a anglický strom šablon v souladu (stejné náz
 
 | Téma | České šablony | Anglické šablony |
 |------|---------------|------------------|
-| Dokumentace | [`README.md#cesky`](README.md#cesky) | [horní část](#promptpunk) |
+| Dokumentace | [tato sekce](#cesky) | [anglická část](#english) |
 | ChatGPT | [`chatgpt/`](chatgpt/) | [`en/chatgpt/`](en/chatgpt/) |
 | Claude | [`claude/`](claude/) | [`en/claude/`](en/claude/) |
 | Cursor | [`cursor/`](cursor/) | [`en/cursor/`](en/cursor/) |
