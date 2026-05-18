@@ -28,17 +28,17 @@ Keep the Czech and English template trees in sync (same filenames and layout).
 
 | Path | Purpose |
 |------|---------|
-| [`chatgpt/`](chatgpt/) | Custom Instructions and checklist for ChatGPT |
-| [`claude/`](claude/) | Claude Projects instructions + Claude Code notes |
-| [`cursor/`](cursor/) | `.cursor/rules/` templates and `.cursorignore` example |
+| [`chatgpt/`](chatgpt/) | Custom Instructions (**copy into settings**) + checklist |
+| [`claude/`](claude/) | Project instructions (**copy**) + Claude Code notes; optional `CLAUDE.md` (**files**) |
+| [`cursor/`](cursor/) | User Rules (**copy**) + `.cursor/rules/` and `.cursorignore` (**files**) |
 
 ## How to use
 
-1. **ChatGPT:** open [`chatgpt/README.md`](chatgpt/README.md), copy the **entire fenced block** from [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) into Custom Instructions.
-2. **Claude (web):** new Project → paste the **entire fenced block** from [`claude/project-instructions.md`](claude/project-instructions.md) into instructions.
-3. **Cursor:** copy `cursor/.cursor` to your repo root and copy or merge `cursor/.cursorignore.example` as `.cursorignore`. Details in [`cursor/README.md`](cursor/README.md).
+1. **ChatGPT** — *copy into settings:* [`chatgpt/README.md`](chatgpt/README.md) → [`custom-instructions.md`](chatgpt/custom-instructions.md) into Custom Instructions.
+2. **Claude (web)** — *copy into settings:* [`claude/README.md`](claude/README.md) → [`project-instructions.md`](claude/project-instructions.md) into Project instructions.
+3. **Cursor** — *copy into settings first:* [`cursor/user-rules.md`](cursor/user-rules.md) into Cursor Settings → Rules; *then optionally save files:* [`cursor/README.md`](cursor/README.md) → copy `cursor/.cursor` and `.cursorignore` into your repo.
 
-**ChatGPT and Claude (web):** the templates in [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) and [`claude/project-instructions.md`](claude/project-instructions.md) share the **same nine rules**; only the opening line differs (Custom Instructions vs Project instructions). **Cursor:** the same nine principles in [`cursor/.cursor/rules/security-vibe-coding.mdc`](cursor/.cursor/rules/security-vibe-coding.mdc).
+**Nine shared security rules** in ChatGPT, Claude (web), Cursor User Rules, and `cursor/.cursor/rules/security-vibe-coding.mdc`. Each tool’s README labels what is **copy into settings** vs **save files**.
 
 ## Czech vs English paths
 
@@ -86,17 +86,17 @@ Při úpravách držte český a anglický strom šablon v souladu (stejné náz
 
 | Složka / soubor | Účel |
 |-----------------|------|
-| [`chatgpt/`](chatgpt/) | Custom Instructions a checklist pro ChatGPT |
-| [`claude/`](claude/) | Instrukce pro Claude Projects + poznámky k Claude Code |
-| [`cursor/`](cursor/) | Pravidla `.cursor/rules/`, vzor `.cursorignore` |
+| [`chatgpt/`](chatgpt/) | Custom Instructions (**kopírovat do nastavení**) + checklist |
+| [`claude/`](claude/) | Project instructions (**kopírovat**) + Claude Code; volitelně `CLAUDE.md` (**soubory**) |
+| [`cursor/`](cursor/) | User Rules (**kopírovat**) + `.cursor/rules/` a `.cursorignore` (**soubory**) |
 
 ## Jak to použít
 
-1. **ChatGPT:** otevřete [`chatgpt/README.md`](chatgpt/README.md), zkopírujte **celý kódový blok** z [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) a vložte ho do nastavení Custom Instructions.
-2. **Claude (web):** nový Project → do Instructions vložte **celý kódový blok** z [`claude/project-instructions.md`](claude/project-instructions.md).
-3. **Cursor:** zkopírujte obsah složky `cursor/.cursor` do kořene vlastního repozitáře a `cursor/.cursorignore.example` přejmenujte na `.cursorignore` (nebo slučte vzory). Detaily v [`cursor/README.md`](cursor/README.md).
+1. **ChatGPT** — *kopírovat do nastavení:* [`chatgpt/README.md`](chatgpt/README.md) → [`custom-instructions.md`](chatgpt/custom-instructions.md) do Custom Instructions.
+2. **Claude (web)** — *kopírovat do nastavení:* [`claude/README.md`](claude/README.md) → [`project-instructions.md`](claude/project-instructions.md) do Project instructions.
+3. **Cursor** — *nejdřív kopírovat do nastavení:* [`cursor/user-rules.md`](cursor/user-rules.md) do Cursor Settings → Rules; *pak volitelně uložit soubory:* [`cursor/README.md`](cursor/README.md) → složka `cursor/.cursor` a `.cursorignore` do vašeho repa.
 
-**ChatGPT a Claude (web):** šablony v [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) a [`claude/project-instructions.md`](claude/project-instructions.md) mají **shodných devět pravidel**; liší se jen úvodní věta (Custom Instructions vs. Project instructions). **Cursor:** stejných devět principů v [`cursor/.cursor/rules/security-vibe-coding.mdc`](cursor/.cursor/rules/security-vibe-coding.mdc).
+**Devět společných bezpečnostních pravidel** u ChatGPT, Claude (web), Cursor User Rules a v `cursor/.cursor/rules/security-vibe-coding.mdc`. V README každého nástroje je uvedeno, co jde **do nastavení** a co **do souborů**.
 
 ## Cesty CZ vs EN
 

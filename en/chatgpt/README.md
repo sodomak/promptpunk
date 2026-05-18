@@ -1,15 +1,26 @@
-# ChatGPT — where to paste the template
+# ChatGPT
 
-## Step 1: Custom Instructions
+## What is in this folder
+
+| File | Deployment type | Where / what to do |
+|------|-----------------|-------------------|
+| [`custom-instructions.md`](custom-instructions.md) | **Copy into settings** | ChatGPT → **Settings** → **Personalization** → **Custom instructions** (second field) |
+| This README (checklist below) | **Read only** | Pre-prompt checklist |
+
+There are **no files** here to save into a project — rules live in your ChatGPT account settings.
+
+## Copy into settings
 
 1. Open ChatGPT → **Settings**.
-2. **Personalization** → **Custom instructions** (wording may vary by product tier).
-3. Paste **the fenced template block** from [`custom-instructions.md`](custom-instructions.md) into the field **“How would you like ChatGPT to respond?”** (or the equivalent second field in your UI). Copy the whole block at once.
-4. In the first field (“What would you like ChatGPT to know about you?”) **do not put sensitive data** — keep a neutral role (e.g. “software engineer, prefer concise answers”).
+2. **Personalization** → **Custom instructions**.
+3. Paste **the entire fenced block** from [`custom-instructions.md`](custom-instructions.md) into **“How would you like ChatGPT to respond?”** (or the equivalent second field).
+4. In the first field (“What would you like ChatGPT to know about you?”) **do not put sensitive data** — a neutral role is enough (e.g. “software engineer, prefer concise answers”).
+
+Text from this repo is **not saved automatically** — you paste it manually in the browser.
 
 Official help: [Custom instructions for ChatGPT](https://help.openai.com/en/articles/8096356-custom-instructions-for-chatgpt).
 
-## Step 2: Account and data
+## Account and data
 
 - For **proprietary code and internal documents**, consider a business / paid tier with clear data-processing terms (e.g. ChatGPT Enterprise) if your organisation requires it.
 - Review **privacy and model improvement** settings in the product (names differ by SKU and region).
