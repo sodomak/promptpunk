@@ -1,16 +1,18 @@
 ---
-description: Základní bezpečnostní pravidla pro generování a úpravu kódu (vibe coding)
+description: Základní bezpečnostní pravidla pro generování a úpravu kódu (vibe coding) — stejných 9 principů jako u ChatGPT/Claude v tomto repu
 alwaysApply: true
 ---
 
-# Bezpečnost kódu a dat
+# Bezpečnost kódu a dat (9 principů)
 
 - **Tajemství:** Nikdy neukládej ani nenavrhuj API klíče, hesla, privátní klíče, OAuth tokeny ani connection stringy s heslem. Používej proměnné prostředí, secret manager nebo šablony s placeholdery (`YOUR_SECRET_HERE` jen jako text bez reálné hodnoty).
-- **Vstupy:** U uživatelského vstupu předpokladej útok; navrhuj validaci, escapování kontextu (HTML/SQL/shell), CSRF u webových formulářů kde platí.
-- **SQL:** Parametrizované dotazy / prepared statements; žádné skládání dotazu řetězcovou interpolací z nedůvěryhodných dat.
-- **Závislosti:** Nepřidávej náhodné balíčky; preferuj ověřené knihovny, pin verzí; upozorni na riziko supply chain.
-- **Logy:** Nevypisuj tajemství ani osobní údaje; strukturované logy bez citlivých payloadů.
-- **Infra:** Privátní síť ve výchozím stavu, TLS navenek, least privilege pro IAM a DB účty.
-- **Důvěra k výstupu:** Každá změna může mít bezpečnostní dopad — piš diffy, které je snadné zkontrolovat; při nejasnostech se ptej.
+- **Citlivá data:** Nevypisuj ani neopakuj zbytečně osobní či jiné citlivé údaje; v ukázkách anonymizuj.
+- **Bezpečný kód:** Validace vstupů, parametrizované dotazy, CSRF kde platí, HTTPS, least privilege. Kritické kontroly (policy, oprávnění) jako kód, ne vágní „buď opatrný“. Žádné záměrně zranitelné ukázky bez varování.
+- **Infra a konfigurace:** U Terraform, Helm values, CI YAML, docker-compose — žádná tajemství v commitu; vault / placeholdery. Privátní síť ve výchozím stavu, TLS, least privilege pro IAM a DB.
+- **Závislosti:** Nepřidávej náhodné balíčky; pin verzí; upozorni na supply chain.
+- **Review a checkpointy:** Piš malé, kontrolovatelné diffy; předpokládej review a CI. U víc kroků u bezpečnostně citlivých změn shrň hotovo / ověřeno / zbývá. Ptej se, když chybí kontext (auth, threat model).
+- **Upřímnost o stavu:** Neříkej hotovo, pokud test, migrace nebo krok přeskočen — uveď, co nebylo ověřeno.
+- **Kontext před změnou:** Před úpravou auth, autorizace, šifrování nebo validace si přečti související kód.
+- **Jeden vzor, chirurgické diffy:** Nemíchej dva konkurující bezpečnostní přístupy; měň jen nutné řádky, nerozbíjej sousední ochranu refaktorem navíc.
 
-Inspirace: bezpečné uvažování před kódem (např. veřejné materiály k *secure vibe coding* a projektovým pravidlům).
+Inspirace: secure vibe coding, komunitní diskuse k agentnímu kódování (např. [Mnilax](https://x.com/mnilax/status/2053116311132155938) — principy aplikované napříč nástroji v repu promptpunk).

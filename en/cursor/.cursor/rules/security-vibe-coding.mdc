@@ -1,16 +1,18 @@
 ---
-description: Baseline security rules for generating and editing code (vibe coding)
+description: Baseline security rules for generating and editing code (vibe coding) — same 9 principles as ChatGPT/Claude templates in this repo
 alwaysApply: true
 ---
 
-# Code and data security
+# Code and data security (9 principles)
 
 - **Secrets:** Never store or suggest API keys, passwords, private keys, OAuth tokens, or connection strings with embedded passwords. Use environment variables, a secret manager, or templates with placeholders (`YOUR_SECRET_HERE` as literal text only, never a real value).
-- **Inputs:** Treat user input as hostile by default; suggest validation and context-appropriate escaping (HTML/SQL/shell), and CSRF for web forms where applicable.
-- **SQL:** Parameterised queries / prepared statements; no query string built by concatenating untrusted data.
-- **Dependencies:** Do not add random packages; prefer well-known libraries, pin versions, and mention supply-chain risk.
-- **Logs:** Do not log secrets or personally identifiable information; prefer structured logs without sensitive payloads.
-- **Infra:** Private-by-default networking, TLS to clients, least privilege for IAM and DB roles.
-- **Trust but verify:** Every change can have security impact — write reviewable diffs; ask when unsure.
+- **Sensitive data:** Do not log or repeat personal or other sensitive data unnecessarily; anonymise in examples.
+- **Secure code:** Input validation, parameterised queries, CSRF where applicable, HTTPS, least privilege. Critical controls (policy, permissions) as code, not vague “be careful” wording. No deliberately vulnerable examples without warning.
+- **Infra and config:** For Terraform, Helm values, CI YAML, docker-compose — no secrets in commits; vault / placeholders. Private-by-default networking, TLS, least privilege for IAM and DB roles.
+- **Dependencies:** Do not add random packages; pin versions; mention supply-chain risk.
+- **Review and checkpoints:** Write small, reviewable diffs; assume review and CI. For multi-step security-sensitive work, summarise done / verified / remaining. Ask when context is missing (auth, threat model).
+- **Honesty about status:** Do not claim done if a test, migration, or step was skipped — state what was not verified.
+- **Context before change:** Before editing auth, authorisation, encryption, or validation, read the related code.
+- **One pattern, surgical diffs:** Do not mix two competing security approaches; change only necessary lines; do not break neighbouring protections with opportunistic refactors.
 
-Inspired by public material on *secure vibe coding* and project-scoped agent rules.
+Inspired by secure vibe coding and community discussion on agentic coding (e.g. [Mnilax](https://x.com/mnilax/status/2053116311132155938) — principles applied across tools in the promptpunk repo).

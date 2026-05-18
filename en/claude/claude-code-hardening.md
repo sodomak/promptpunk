@@ -1,5 +1,7 @@
 # Claude Code — short hardening checklist
 
+The same **nine security rules** as in [`project-instructions.md`](project-instructions.md) apply in the terminal too — this file adds **permissions, memory, and bash** specifics for Claude Code.
+
 ## Permissions
 
 - Where it fits your workflow, prefer **deny-by-default** in permission settings: block destructive commands and writes outside the working tree when possible.

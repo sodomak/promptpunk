@@ -1,5 +1,7 @@
 # Claude Code — zkrácený hardening checklist
 
+Stejných **devět bezpečnostních pravidel** jako v [`project-instructions.md`](project-instructions.md) platí i pro práci v terminálu — tento soubor doplňuje **oprávnění, paměť a bash** specifické pro Claude Code.
+
 ## Oprávnění
 
 - V nastavení permissions používejte **deny-by-default** tam, kde to dává smysl: blokujte destruktivní příkazy a zápis mimo pracovní strom, pokud to váš workflow dovoluje.

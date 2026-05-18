@@ -20,7 +20,7 @@ Handout from the **CryptoByte** talk — copy into your own project or account o
 2. **Claude (web):** new Project → paste the **entire fenced block** from [`claude/project-instructions.md`](claude/project-instructions.md) into instructions.
 3. **Cursor:** copy `cursor/.cursor` to your repo root and copy or merge `cursor/.cursorignore.example` as `.cursorignore`. Details in [`cursor/README.md`](cursor/README.md).
 
-**ChatGPT and Claude (web):** the templates in [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) and [`claude/project-instructions.md`](claude/project-instructions.md) share the **same six rules** (including Terraform, Helm, CI, Docker); only the opening line differs (Custom Instructions vs Project instructions).
+**ChatGPT and Claude (web):** the templates in [`chatgpt/custom-instructions.md`](chatgpt/custom-instructions.md) and [`claude/project-instructions.md`](claude/project-instructions.md) share the **same nine rules**; only the opening line differs (Custom Instructions vs Project instructions). **Cursor:** the same nine principles in [`cursor/.cursor/rules/security-vibe-coding.mdc`](cursor/.cursor/rules/security-vibe-coding.mdc).
 
 ## Czech vs English paths
 
@@ -38,3 +38,4 @@ Best practices and product UIs change. This pack reflects **May 2026**; verify c
 - [Cursor — Rules](https://docs.cursor.com/context/rules)
 - [OpenAI — Security](https://openai.com/security)
 - [Anthropic — Claude Code security](https://docs.anthropic.com/en/docs/claude-code/security)
+- Inspiration for part of the rules: community thread [Mnilax](https://x.com/mnilax/status/2053116311132155938) (agentic vibe coding), adapted for all three tools in this repo
